@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}cloudswan solution{% endblock %}
+
+{% block content %}
+
+<img src=" http://cloudswansolution.com/img/logo1.png">
+<h1>ADMIN</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-block btn-large" >Log in</button>
+</form>
+{% endblock %}

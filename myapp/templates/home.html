@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<body>
+{% if user.is_authenticated %}
+<h1 style="text-align: center; color: #ff0040;">  Hi {{ user.username }}!</h1>
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+  <p style="text-align: center; color: #ff0040;">You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
+{% endblock %}
+</body>
